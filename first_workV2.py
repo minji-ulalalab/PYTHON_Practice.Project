@@ -14,7 +14,7 @@ def counting(q):
     number=0
     
     while True:
-        if number > 10:  #65535가되면 0으로 돌아간다
+        if number > 65535:  #65535가되면 0으로 돌아간다
             number = 0
 
         #print("counting:", number)
