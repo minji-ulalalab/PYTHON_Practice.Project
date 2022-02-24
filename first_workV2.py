@@ -10,7 +10,7 @@ import threading
 
 
 #1초에 1씩 증가하는 스레드(65535가 되면 다시 0부터 시작)//10으로 시험하기
-def counting(q):
+def counting(q): #queue사용을 위해서 q로 queue를 받음
     number=0
     
     while True:
@@ -28,7 +28,7 @@ def counting(q):
 
 def printing(q):
     while True:
-        number = q.get()
+        number = q.get()#첫번째 스레드에서 사용한 number와 이름만 같고 다른 변수
         print("printing:", number)#첫번째 스레드에서 실행한 함수
         time.sleep(1) #1초 마다
         
